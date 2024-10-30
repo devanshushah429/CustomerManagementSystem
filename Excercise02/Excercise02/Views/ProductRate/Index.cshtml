@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProductRateModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ProductRate</td>
+            <td>ProductName</td>
+            <td>PriceAppliedDate</td>
+            <td>Created</td>
+            <td>Modified</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductRateModel productRateModel in Model)
+        {
+            <tr>
+                <td>@productRateModel.ProductRate</td>
+                <td>@productRateModel.Product.ProductName</td>
+                <td>@productRateModel.PriceAppliedDate</td>
+                <td>@productRateModel.Created</td>
+                <td>@productRateModel.Modified</td>
+            </tr>
+        }
+    </tbody>
+</table>

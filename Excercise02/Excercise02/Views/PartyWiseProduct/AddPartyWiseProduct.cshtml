@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ProductModel>
+<form method="post" asp-controller="PartyWiseProduct" asp-action="AddPartyWiseProduct">
+    <input type="hidden" name="partyID" value="@ViewBag.PartyID" />
+    @if (Model.Count() > 0)
+    {
+        <select name="productID">
+            <option selected disabled hidden>Click Here</option>
+            @foreach (ProductModel productModel in Model)
+            {
+                <option value="@productModel.ProductID">@productModel.ProductName</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-success">Submit</button>
+    }
+    else
+    {
+        <h4>No Products to be added</h4>
+    }
+</form>

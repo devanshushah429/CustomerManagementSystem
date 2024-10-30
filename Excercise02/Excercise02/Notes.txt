@@ -1,0 +1,1 @@
+﻿Make Product Rate Controller and make data base Changes for OOP Approach and remove redundant code from this

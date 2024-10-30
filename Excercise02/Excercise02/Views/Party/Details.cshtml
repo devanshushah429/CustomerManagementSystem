@@ -1,0 +1,50 @@
+﻿@model PartyModel
+
+<h1>@Model.PartyName Details</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Party Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Created</th>
+                        <th>Modified</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.PartyName</td>
+                        <td>@Model.Email</td>
+                        <td>@Model.PhoneNumber</td>
+                        <td>@Model.Created</td>  <!-- Formatting date and time -->
+                        <td>@Model.Modified</td> <!-- Formatting date and time -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Products Associated with @Model.PartyName</h2>
+            <a class="btn btn-primary" asp-controller="PartyWiseProduct" asp-action="AddPartyWiseProduct" asp-route-id="@Model.PartyID">Add products</a>
+            @if(Model.PartyWiseProducts.Count() > 0)
+            {   
+                <ul class="list-group">
+                    @foreach (PartyWiseProductModel productModel in Model.PartyWiseProducts)
+                    {
+                        <li class="list-group-item">@productModel.Product.ProductName</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <h2>No products to display</h2>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PartyModel>
+<h1>Parties</h1>
+<a class="btn btn-primary" asp-area="" asp-controller="Party" asp-action="AddEditParty">Add party</a>
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Party Name</td>
+                <td>Phone Number</td>
+                <td>Email</td>
+                <td>Created</td>
+                <td>Modified</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PartyModel partyModel in Model)
+            {
+                <tr>
+                    <td>@partyModel.PartyName</td>
+                    <td>@partyModel.PhoneNumber</td>
+                    <td>@partyModel.Email</td>
+                    <td>@partyModel.Created</td>
+                    <td>@partyModel.Modified</td>
+                    <td>
+                        <a asp-controller="Party" asp-action="Details" asp-route-id="@partyModel.PartyID" class="btn btn-outline-primary">
+                            Details
+                        </a>
+                        <a asp-controller="Party" asp-action="AddEditParty" asp-route-id="@partyModel.PartyID" class="btn btn-outline-success">
+                            Edit
+                        </a>
+                        <a asp-controller="Party" asp-action="Delete" asp-route-id="@partyModel.PartyID" class="btn btn-outline-danger">
+                            Delete
+                        </a>
+                        <a asp-controller="Party" asp-action="PartyWiseInvoice" asp-route-id="@partyModel.PartyID" class="btn btn-outline-dark">Invoice</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h2>No parties to display</h2>
+}

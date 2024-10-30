@@ -1,0 +1,35 @@
+﻿@model IEnumerable<InvoiceModel>
+
+<button class="btn btn-dark" asp-controller="Invoice" asp-action="AddEditInvoice" asp-route-id="@ViewBag.PartyID">Add invoice</button>
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Party ID</td>
+                <td>Invoice ID</td>
+                <td>Total Price</td>
+                <td>Is Paid</td>
+                <td>Created</td>
+                <td>Modified</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (InvoiceModel invoiceModel in Model)
+            {
+                <tr>
+                    <td>@invoiceModel.PartyID</td>
+                    <td>@invoiceModel.InvoiceID</td>
+                    <td>@invoiceModel.TotalPrice</td>
+                    <td>@invoiceModel.IsPaid</td>
+                    <td>@invoiceModel.Created</td>
+                    <td>@invoiceModel.Modified</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h2>No invoices available for this party</h2>
+}
