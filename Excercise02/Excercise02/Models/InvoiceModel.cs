@@ -17,7 +17,7 @@ namespace Excercise02.Models
 
         public DateTime? InvoiceDate { get; set; }
 
-        public bool? IsPaid { get; set; }
+        public bool IsPaid { get; set; } = false;
 
         public DateTime? Created { get; set; }
         

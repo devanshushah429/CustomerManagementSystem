@@ -33,7 +33,7 @@
                         <a asp-controller="Party" asp-action="Delete" asp-route-id="@partyModel.PartyID" class="btn btn-outline-danger">
                             Delete
                         </a>
-                        <a asp-controller="Party" asp-action="PartyWiseInvoice" asp-route-id="@partyModel.PartyID" class="btn btn-outline-dark">Invoice</a>
+                        <a asp-controller="Party" asp-action="PartyWiseInvoice" asp-route-partyID="@partyModel.PartyID" class="btn btn-outline-dark">Invoice</a>
                     </td>
                 </tr>
             }

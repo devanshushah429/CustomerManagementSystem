@@ -1,42 +1,29 @@
 ﻿using Excercise02.Contexts;
+using Excercise02.DAL;
 using Excercise02.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Excercise02.Controllers
 {
     public class PartyWiseProductController : Controller
     {
-        private readonly AppDbContext _context;
-
-        public PartyWiseProductController(AppDbContext context)
-        {
-            _context = context;
-        }
+        private static PartyWiseProduct_DALBase _partyWiseProduct_DALBase = new PartyWiseProduct_DALBase();
 
 
         #region Get the products as per party
         [HttpGet]
         public async Task<List<PartyWiseProductModel>> GetProductsForParty(int id)
         {
-            List<PartyWiseProductModel> list = await _context.PartyWiseProduct.Where(p => p.PartyID == id)
-                .Join(_context.Products, partyWiseProduct => partyWiseProduct.ProductID, product => product.ProductID, (partyWiseProduct, product) => new PartyWiseProductModel() { Product = product }).ToListAsync();
-            return list;
+            List<PartyWiseProductModel> partyWiseProducts = await _partyWiseProduct_DALBase.GetAllProductOfPartyByID(id);
+            return partyWiseProducts;
+
         }
         #endregion
 
         public async Task<IActionResult> AddPartyWiseProduct(int id)
         {
-            List<int?> excludedProductIds = await _context.PartyWiseProduct
-                .Where(partyWiseProduct => partyWiseProduct.PartyID == id)
-                .Select(partyWiseProduct => partyWiseProduct.ProductID)
-                .ToListAsync();
-
-            List<ProductModel> availableProducts = await _context.Products
-                .Where(product => !excludedProductIds.Contains(product.ProductID))
-                .ToListAsync();
-            ViewBag.PartyID = id;
+            List<ProductModel?> availableProducts = await _partyWiseProduct_DALBase.GetProductIDsOfParty(id);
 
             return View(availableProducts);
         }
@@ -44,8 +31,8 @@ namespace Excercise02.Controllers
         [HttpPost]
         public IActionResult AddPartyWiseProduct(int partyID, int productID)
         {
-            _context.PartyWiseProduct.Add(new PartyWiseProductModel { ProductID = productID, PartyID = partyID });
-            _context.SaveChanges();
+            PartyWiseProductModel partyWiseProductModel = new PartyWiseProductModel() { ProductID = productID, PartyID = partyID };
+            _partyWiseProduct_DALBase.AddPartyWiseProduct(partyWiseProductModel);
             return RedirectToAction("Details", "Party", new { id = partyID });
         }
     }

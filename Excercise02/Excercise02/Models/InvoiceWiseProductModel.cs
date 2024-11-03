@@ -21,5 +21,8 @@ namespace Excercise02.Models
         public int? Quantity { get; set; }
 
         public Decimal? Subtotal { get; set; }
+
+        [NotMapped]
+        public bool IsSelected { get; set; } = false;
     }
 }
