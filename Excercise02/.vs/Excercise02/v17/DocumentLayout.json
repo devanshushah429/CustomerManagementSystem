@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Devanshu\\MVC Task\\Excercise02\\",
+  "WorkspaceRootPath": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\models\\productratemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\models\\productratemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\views\\invoice\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\views\\invoice\\addeditinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\addeditinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\views\\invoice\\editinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\editinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\models\\invoicemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\models\\invoicemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\controllers\\invoicewiseproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\controllers\\invoicewiseproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\views\\party\\partywiseinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\party\\partywiseinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\excercise02\\excercise02\\controllers\\partycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\controllers\\partycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\dal\\invoicewiseproduct_dalbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\dal\\invoicewiseproduct_dalbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\models\\invoicewiseproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\models\\invoicewiseproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\views\\invoice\\addinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\addinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|d:\\devanshu\\mvc task\\customermanagementsystem\\excercise02\\excercise02\\dal\\invoice_dalbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D0180-B981-4A9E-8778-7D6B0626B2E6}|Excercise02\\Excercise02.csproj|solutionrelative:excercise02\\dal\\invoice_dalbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +50,136 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Excercise02\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Excercise02\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAB5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T13:17:39.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PartyWiseInvoice.cshtml",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Party\\PartyWiseInvoice.cshtml",
-              "RelativeDocumentMoniker": "Excercise02\\Views\\Party\\PartyWiseInvoice.cshtml",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Party\\PartyWiseInvoice.cshtml",
-              "RelativeToolTip": "Excercise02\\Views\\Party\\PartyWiseInvoice.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T13:16:55.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PartyController.cs",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Controllers\\PartyController.cs",
-              "RelativeDocumentMoniker": "Excercise02\\Controllers\\PartyController.cs",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Controllers\\PartyController.cs",
-              "RelativeToolTip": "Excercise02\\Controllers\\PartyController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwJAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:12:05.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InvoiceModel.cs",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Models\\InvoiceModel.cs",
-              "RelativeDocumentMoniker": "Excercise02\\Models\\InvoiceModel.cs",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Models\\InvoiceModel.cs",
-              "RelativeToolTip": "Excercise02\\Models\\InvoiceModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "InvoiceWiseProductController.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Controllers\\InvoiceWiseProductController.cs",
+              "RelativeDocumentMoniker": "Excercise02\\Controllers\\InvoiceWiseProductController.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Controllers\\InvoiceWiseProductController.cs",
+              "RelativeToolTip": "Excercise02\\Controllers\\InvoiceWiseProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:10:23.926Z",
+              "WhenOpened": "2024-11-04T13:10:25.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AddEditInvoice.cshtml",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Invoice\\AddEditInvoice.cshtml",
-              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\AddEditInvoice.cshtml",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Invoice\\AddEditInvoice.cshtml",
-              "RelativeToolTip": "Excercise02\\Views\\Invoice\\AddEditInvoice.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EditInvoice.cshtml",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\EditInvoice.cshtml",
+              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\EditInvoice.cshtml",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\EditInvoice.cshtml",
+              "RelativeToolTip": "Excercise02\\Views\\Invoice\\EditInvoice.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T13:09:38.378Z",
+              "WhenOpened": "2024-11-04T13:07:38.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Invoice\\Index.cshtml",
-              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\Index.cshtml",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Views\\Invoice\\Index.cshtml",
-              "RelativeToolTip": "Excercise02\\Views\\Invoice\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\Details.cshtml",
+              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\Details.cshtml",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\Details.cshtml",
+              "RelativeToolTip": "Excercise02\\Views\\Invoice\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T13:06:22.037Z",
+              "WhenOpened": "2024-11-04T12:00:05.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductRateModel.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Models\\ProductRateModel.cs",
+              "RelativeDocumentMoniker": "Excercise02\\Models\\ProductRateModel.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Models\\ProductRateModel.cs",
+              "RelativeToolTip": "Excercise02\\Models\\ProductRateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:54:30.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "Excercise02\\Controllers\\InvoiceController.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "Excercise02\\Controllers\\InvoiceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:03:49.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Invoice_DALBase.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\DAL\\Invoice_DALBase.cs",
+              "RelativeDocumentMoniker": "Excercise02\\DAL\\Invoice_DALBase.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\DAL\\Invoice_DALBase.cs",
+              "RelativeToolTip": "Excercise02\\DAL\\Invoice_DALBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:04:48.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InvoiceWiseProductModel.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Models\\InvoiceWiseProductModel.cs",
+              "RelativeDocumentMoniker": "Excercise02\\Models\\InvoiceWiseProductModel.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Models\\InvoiceWiseProductModel.cs",
+              "RelativeToolTip": "Excercise02\\Models\\InvoiceWiseProductModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:54:33.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "InvoiceController.cs",
-              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Controllers\\InvoiceController.cs",
-              "RelativeDocumentMoniker": "Excercise02\\Controllers\\InvoiceController.cs",
-              "ToolTip": "D:\\Devanshu\\MVC Task\\Excercise02\\Excercise02\\Controllers\\InvoiceController.cs",
-              "RelativeToolTip": "Excercise02\\Controllers\\InvoiceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Title": "InvoiceWiseProduct_DALBase.cs",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\DAL\\InvoiceWiseProduct_DALBase.cs",
+              "RelativeDocumentMoniker": "Excercise02\\DAL\\InvoiceWiseProduct_DALBase.cs",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\DAL\\InvoiceWiseProduct_DALBase.cs",
+              "RelativeToolTip": "Excercise02\\DAL\\InvoiceWiseProduct_DALBase.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwC0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:34:01.822Z",
+              "WhenOpened": "2024-11-04T12:19:31.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\Index.cshtml",
+              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\Index.cshtml",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\Index.cshtml",
+              "RelativeToolTip": "Excercise02\\Views\\Invoice\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T12:09:53.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddInvoice.cshtml",
+              "DocumentMoniker": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\AddInvoice.cshtml",
+              "RelativeDocumentMoniker": "Excercise02\\Views\\Invoice\\AddInvoice.cshtml",
+              "ToolTip": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\Views\\Invoice\\AddInvoice.cshtml",
+              "RelativeToolTip": "Excercise02\\Views\\Invoice\\AddInvoice.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T10:42:16.377Z",
               "EditorCaption": ""
             }
           ]

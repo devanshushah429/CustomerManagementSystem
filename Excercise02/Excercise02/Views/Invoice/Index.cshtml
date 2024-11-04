@@ -1,6 +1,6 @@
 ﻿@model List<InvoiceModel>
 <h1>List Of All invoices</h1>
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <td>Party ID</td>
@@ -9,6 +9,7 @@
             <td>Is Paid</td>
             <td>Created</td>
             <td>Modified</td>
+            <td>Actions</td>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,10 @@
                 <td>@invoiceModel.IsPaid</td>
                 <td>@invoiceModel.Created</td>
                 <td>@invoiceModel.Modified</td>
+                <td>
+                    <a asp-controller="Invoice" asp-action="EditInvoice" asp-route-invoiceID="@invoiceModel.InvoiceID" class="btn btn-outline-success">Edit</a>
+                    <a asp-controller="Invoice" asp-action="Details" asp-route-invoiceID="@invoiceModel.InvoiceID" class="btn btn-outline-primary">Details</a>
+                </td>
             </tr>
         }
     </tbody>

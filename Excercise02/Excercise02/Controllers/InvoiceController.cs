@@ -8,13 +8,7 @@ namespace Excercise02.Controllers
 {
     public class InvoiceController : Controller
     {
-        private readonly AppDbContext _context;
-        private static Invoice_DALBase invoice_DALBase;
-        public InvoiceController(AppDbContext context)
-        {
-            invoice_DALBase = new Invoice_DALBase();
-            _context = context;
-        }
+        private static Invoice_DALBase invoice_DALBase = invoice_DALBase = new Invoice_DALBase();
 
         #region Display the List of All Invoices
         public async Task<IActionResult> Index()
@@ -24,36 +18,52 @@ namespace Excercise02.Controllers
         }
         #endregion
 
+        #region Display the Details of Invoice
+        public async Task<IActionResult> Details(int invoiceID)
+        {
+            InvoiceModel invoice = await invoice_DALBase.GetInvoiceDetails(invoiceID);
+            return View(invoice);
+        }
+        #endregion
+
         #region Open Add Invoice Page using PartyID
         [HttpGet]
         public async Task<IActionResult> AddInvoiceUsingPartyID(int partyID)
         {
             InvoiceModel model = new InvoiceModel();
             model.PartyID = partyID;
-            model.InvoiceWiseProducts = await _context.PartyWiseProduct
-                                        .Where(x => x.PartyID == partyID)
-                                        .Join(_context.Parties,
-                                                x => x.PartyID,
-                                                y => y.PartyID,
-                                                (x, y) => new InvoiceWiseProductModel() { Product = x.Product, ProductID = x.ProductID })
-                                        .ToListAsync();
-            return View("AddEditInvoice", model);
+            model.InvoiceWiseProducts = await invoice_DALBase.GetInvoiceWiseProducts(partyID);
+            return View("AddInvoice", model);
+        }
+        #endregion
+
+        #region Edit the invoice using InvoiceID
+        [HttpGet]
+        public async Task<IActionResult> EditInvoice(int invoiceID)
+        {
+            InvoiceModel? model = await invoice_DALBase.GetInvoiceDetails(invoiceID);
+            return View("EditInvoice", model);
         }
         #endregion
 
         #region Save The invoice in database table
         [HttpPost]
-        public async Task<IActionResult> AddInvoice(InvoiceModel model)
+        public async Task<IActionResult> AddEditInvoice(InvoiceModel model)
         {
             if (ModelState.IsValid)
             {
-                invoice_DALBase.AddInvoice(model);
-                return View("Index");
+                if (model.InvoiceID == null)
+                {
+                    await invoice_DALBase.AddInvoice(model);
+                }
+                else
+                {
+                    await invoice_DALBase.EditInvoice(model);
+                }
+                return RedirectToAction("Invoice","Party",new { partyID = model.PartyID });
             }
-            return View("AddEditInvoice",model);
+            return View("AddEditInvoice", model);
         }
         #endregion
-
-
     }
 }

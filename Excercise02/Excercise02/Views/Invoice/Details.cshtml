@@ -1,0 +1,28 @@
+﻿@model InvoiceModel
+
+<h1>Created : @Model.Created</h1>
+<h1>Modified: @Model.Modified</h1>
+<h1>Total Price: @Model.TotalPrice</h1>
+<a asp-controller="InvoiceWiseProducts" asp-action="AddInvoiceWiseProduct" asp-route-invoiceID="" class="btn btn-primary">Add Product</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Product Name</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    @foreach (InvoiceWiseProductModel invoiceWiseProduct in Model.InvoiceWiseProducts)
+    {
+        <tr>
+            <td>@invoiceWiseProduct.Product.ProductName</td>
+            <td>@invoiceWiseProduct.Quantity</td>
+            <td>@invoiceWiseProduct.Subtotal</td>
+            <td>
+                <a class="btn btn-outline-danger" asp-controller="InvoiceWiseProducts" asp-action="DeleteInvoiceWiseProduct" asp-route-invoiceWiseProductID="@invoiceWiseProduct.InvoiceWiseProductID">Delete</a>
+                <a class="btn btn-outline-success" asp-controller="InvoiceWiseProducts" asp-action="EditInvoiceWiseProduct" asp-route-invoiceWiseProductID="@invoiceWiseProduct.InvoiceWiseProductID">Edit</a>
+            </td>
+        </tr>
+    }
+</table>

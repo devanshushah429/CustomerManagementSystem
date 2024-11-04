@@ -29,13 +29,12 @@ namespace Excercise02.DAL
         public async Task<PartyModel>? GetPartyDetailsAsync(int id)
         {
             PartyModel? party = await _context.Parties.FindAsync(id);
-            PartyWiseProductController partyWiseProductController = new PartyWiseProductController(_context);
+            PartyWiseProductController partyWiseProductController = new PartyWiseProductController();
             if (party != null)
             {
                 party.PartyWiseProducts = await partyWiseProductController.GetProductsForParty(id);
             }
             return party;
-            
         }
         #endregion
 

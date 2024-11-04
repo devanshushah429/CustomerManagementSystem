@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Excercise02.Migrations
 {
     /// <inheritdoc />
-    public partial class AddAllTables : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,7 +35,6 @@ namespace Excercise02.Migrations
                     ProductID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Modified = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -54,7 +53,7 @@ namespace Excercise02.Migrations
                     PartyID = table.Column<int>(type: "int", nullable: true),
                     TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     InvoiceDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IsPaid = table.Column<bool>(type: "bit", nullable: true),
+                    IsPaid = table.Column<bool>(type: "bit", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Modified = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -99,9 +98,10 @@ namespace Excercise02.Migrations
                     ProductRateID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductID = table.Column<int>(type: "int", nullable: true),
-                    OldPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    ChangedPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    UpdateDateTime = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    ProductRate = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    PriceAppliedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Modified = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

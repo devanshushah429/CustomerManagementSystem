@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Excercise02.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241030102301_ProductTableUpdate")]
-    partial class ProductTableUpdate
+    [Migration("20241104042914_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Excercise02.Migrations
                     b.Property<DateTime?>("InvoiceDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsPaid")
+                    b.Property<bool>("IsPaid")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("Modified")

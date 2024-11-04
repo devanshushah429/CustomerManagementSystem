@@ -36,7 +36,7 @@ namespace Excercise02.Migrations
                     b.Property<DateTime?>("InvoiceDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsPaid")
+                    b.Property<bool>("IsPaid")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("Modified")
