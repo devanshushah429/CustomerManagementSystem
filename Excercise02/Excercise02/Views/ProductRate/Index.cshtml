@@ -1,24 +1,47 @@
 ﻿@model IEnumerable<ProductRateModel>
 
+<h1>Product Rates</h1>
+
+<!-- Search Form -->
+<form method="get" asp-controller="ProductRate" asp-action="Index" class="d-flex align-items-center mb-3">
+    <div class="me-2">
+        <input type="text" name="productName" placeholder="Search by Product Name" class="form-control" value="@ViewBag.ProductName" style="width: 200px;" />
+    </div>
+    <div class="me-2">
+        <input type="date" name="priceAppliedDate" placeholder="Search by Price Applied Date" class="form-control" value="@ViewBag.PriceAppliedDate" style="width: 200px;" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<!-- Product Rate Table -->
 <table class="table">
     <thead>
         <tr>
-            <td>ProductRate</td>
-            <td>ProductName</td>
-            <td>PriceAppliedDate</td>
-            <td>Created</td>
-            <td>Modified</td>
+            <th>Product Rate</th>
+            <th>Product Name</th>
+            <th>Price Applied Date</th>
+            <th>Created</th>
+            <th>Modified</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (ProductRateModel productRateModel in Model)
+        @if (Model.Any())
+        {
+            foreach (ProductRateModel productRateModel in Model)
+            {
+                <tr>
+                    <td>@productRateModel.ProductRate</td>
+                    <td>@productRateModel.Product.ProductName</td>
+                    <td>@productRateModel.PriceAppliedDate</td>
+                    <td>@productRateModel.Created</td>
+                    <td>@productRateModel.Modified</td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@productRateModel.ProductRate</td>
-                <td>@productRateModel.Product.ProductName</td>
-                <td>@productRateModel.PriceAppliedDate</td>
-                <td>@productRateModel.Created</td>
-                <td>@productRateModel.Modified</td>
+                <td colspan="5" class="text-center">No product rates to display</td>
             </tr>
         }
     </tbody>

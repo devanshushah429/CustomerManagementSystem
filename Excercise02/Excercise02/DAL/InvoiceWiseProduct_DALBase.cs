@@ -5,6 +5,14 @@ namespace Excercise02.DAL
 {
     public class InvoiceWiseProduct_DALBase : DAL_Helper
     {
+        #region Get The List of product ID to exclude
+        public async Task<List<int?>> GetAllID(int invoiceID)
+        {
+            List<int?> ids = await _context.InvoiceWiseProducts.Where(iwp => iwp.InvoiceID == invoiceID).Select(iwp => iwp.ProductID).ToListAsync();
+            return ids;
+        }
+        #endregion
+
         #region Add Invoice Wise Product
         public async Task AddInvoiceWiseProduct(InvoiceWiseProductModel model)
         {
@@ -37,6 +45,7 @@ namespace Excercise02.DAL
             existingProduct.Quantity = model.Quantity;
 
             existingProduct.Subtotal = model.Subtotal;
+            _context.InvoiceWiseProducts.Update(existingProduct);
 
             await _context.SaveChangesAsync();
         }
@@ -55,11 +64,12 @@ namespace Excercise02.DAL
         #endregion
 
         #region Get Details
-
         public async Task<InvoiceWiseProductModel> GetDetails(int invoiceWiseProductID)
         {
             InvoiceWiseProductModel? existingProduct = await _context.InvoiceWiseProducts
                 .FirstOrDefaultAsync(iwp => iwp.InvoiceWiseProductID == invoiceWiseProductID);
+            Product_DALBase product_DALBase = new Product_DALBase();
+            existingProduct.Product = await product_DALBase.GetProductDetails(existingProduct.ProductID);
             return existingProduct;
         }
         #endregion

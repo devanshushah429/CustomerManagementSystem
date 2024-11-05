@@ -1,1 +1,5 @@
 ﻿Make Product Rate Controller and make data base Changes for OOP Approach and remove redundant code from this
+
+https://www.udemy.com/join/login-popup/?next=%2F&passwordredirect=True&skip_suggest=1
+
+https://github.com/Harsha-Global/AspNetCore-Harsha/blob/main/17.%20EntityFrameworkCore/01.%20DbContext%20and%20DbSet/Entities/Country.cs

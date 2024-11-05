@@ -1,7 +1,24 @@
 ﻿@model ProductModel
-<h1>Product Details Page</h1>
-<h2>Product name: @Model.ProductName</h2>
-<h2>Product price: @Model.ProductPrice</h2>
-<h2>Description: @Model.Description</h2>
-<h2>Created: @Model.Created</h2>
-<h2>Modified: @Model.Modified</h2>
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container mt-4">
+    <h1>Product Details Page</h1>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Product Name: @Model.ProductName</h2>
+            <h5 class="card-subtitle mb-2 text-muted">Price: @Model.ProductPrice</h5>
+            <p class="card-text">Description: @Model.Description</p>
+            <p class="card-text">Created: @Model.Created</p>
+            <p class="card-text">Modified: @Model.Modified</p>
+
+            <a href="/Products" class="btn btn-primary">Back to Products</a>
+            @* <a href="/Products/Edit/@Model.ProductID" class="btn btn-warning">Edit Product</a> *@
+            @* <form action="/Products/Delete/@Model.ProductID" method="post" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Delete Product</button>
+            </form> *@
+        </div>
+    </div>
+</div>

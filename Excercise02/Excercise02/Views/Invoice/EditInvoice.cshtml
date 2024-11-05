@@ -1,6 +1,6 @@
 ﻿@model InvoiceModel
 
-<form asp-controller="Invoice" asp-action="AddInvoice" method="post">
+<form asp-controller="Invoice" asp-action="EditInvoice" method="post">
     <input asp-for="InvoiceID" readonly type="hidden" />
     <input type="hidden" asp-for="PartyID" />
 
@@ -10,7 +10,9 @@
         <span asp-validation-for="InvoiceDate" class="text-danger"></span>
     </div>
 
+    <div class="m-2">
     <h4>Products</h4>
+    <a asp-controller="InvoiceWiseProduct" asp-action="AddInvoiceWiseProduct" asp-route-invoiceID="@Model.InvoiceID" asp-route-partyID="@Model.PartyID" class="btn btn-primary mb-2">Add Product</a>
     <table class="table table-bordered" id="productTable">
         <thead>
             <tr>
@@ -34,7 +36,8 @@
 
                         </td>
                         <td>
-                <a asp-controller="InvoiceWiseProduct" asp-action="Delete" asp-route-invoiceWiseProductID="@invoiceWiseProduct.InvoiceWiseProductID" class="btn btn-outline-danger">Delete</a>
+                            <a asp-controller="InvoiceWiseProduct" asp-action="Delete" asp-route-invoiceWiseProductID="@invoiceWiseProduct.InvoiceWiseProductID" class="btn btn-outline-danger">Delete</a>
+                            <a asp-controller="InvoiceWiseProduct" asp-action="Edit" asp-route-invoiceWiseProductID="@invoiceWiseProduct.InvoiceWiseProductID" class="btn btn-outline-success">Edit</a>
                         </td>
                     </tr>
                 }
@@ -45,6 +48,7 @@
             }
         </tbody>
     </table>
+    </div>
 
     <h5>Total Price: @Model.TotalPrice</h5>
     <br />

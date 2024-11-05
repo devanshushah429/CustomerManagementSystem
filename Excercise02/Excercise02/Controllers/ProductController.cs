@@ -12,12 +12,54 @@ namespace Excercise02.Controllers
 
         #region List all the products
         [Route("Product")]
+        [Route("Products")]
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchName, string minPrice, string maxPrice, string sortOrder)
         {
             List<ProductModel> products = await _product_DALBase.GetAllProducts();
+
+            if (!string.IsNullOrEmpty(searchName))
+            {
+                products = products.Where(p => p.ProductName.Contains(searchName, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(minPrice) && decimal.TryParse(minPrice, out decimal priceMin))
+            {
+                products = products.Where(p => p.ProductPrice >= priceMin).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(maxPrice) && decimal.TryParse(maxPrice, out decimal priceMax))
+            {
+                products = products.Where(p => p.ProductPrice <= priceMax).ToList();
+            }
+            ViewBag.ProductName = searchName;
+            ViewBag.MinPrice = minPrice;
+            ViewBag.MaxPrice = maxPrice;
+
+            // Apply sorting based on the selected order
+            ViewBag.NameSort = sortOrder == "Name" ? "name_desc" : "Name";
+            ViewBag.PriceSort = sortOrder == "Price" ? "price_desc" : "Price";
+
+            
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    products = products.OrderByDescending(p => p.ProductName).ToList();
+                    break;
+                case "Price":
+                    products = products.OrderBy(p => p.ProductPrice).ToList();
+                    break;
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.ProductPrice).ToList();
+                    break;
+                default:
+                    products = products.OrderBy(p => p.ProductName).ToList();
+                    break;
+            }
             return View(products);
         }
+
+
         #endregion
 
         #region Show Details of Product

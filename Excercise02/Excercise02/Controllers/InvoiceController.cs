@@ -1,14 +1,13 @@
-﻿using Excercise02.Contexts;
-using Excercise02.DAL;
+﻿using Excercise02.DAL;
 using Excercise02.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Rotativa.AspNetCore;
 
 namespace Excercise02.Controllers
 {
     public class InvoiceController : Controller
     {
-        private static Invoice_DALBase invoice_DALBase = invoice_DALBase = new Invoice_DALBase();
+        private static Invoice_DALBase invoice_DALBase = invoice_DALBase = new Invoice_DALBase();   
 
         #region Display the List of All Invoices
         public async Task<IActionResult> Index()
@@ -42,6 +41,19 @@ namespace Excercise02.Controllers
         public async Task<IActionResult> EditInvoice(int invoiceID)
         {
             InvoiceModel? model = await invoice_DALBase.GetInvoiceDetails(invoiceID);
+            return View(model);
+        }
+        #endregion
+
+        #region Save for Edit the invoice using InvoiceID
+        [HttpPost]
+        public async Task<IActionResult> EditInvoice(InvoiceModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await invoice_DALBase.EditInvoice(model);
+                return RedirectToAction("Index");
+            }
             return View("EditInvoice", model);
         }
         #endregion
@@ -60,10 +72,30 @@ namespace Excercise02.Controllers
                 {
                     await invoice_DALBase.EditInvoice(model);
                 }
-                return RedirectToAction("Invoice","Party",new { partyID = model.PartyID });
+                return RedirectToAction("Invoice", "Party", new { partyID = model.PartyID });
             }
             return View("AddEditInvoice", model);
         }
         #endregion
+
+        #region Generate Invoice PDF
+        public async Task<IActionResult> InvoicePDF(int invoiceID)
+        {
+            InvoiceModel invoice = await invoice_DALBase.GetInvoiceDetails(invoiceID);
+            return new ViewAsPdf("InvoicePDF", invoice)
+            {
+                PageMargins = new Rotativa.AspNetCore.Options.Margins()
+                {
+                    Top = 20,
+                    Right = 20,
+                    Bottom = 20,
+                    Left = 20
+                },
+                PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape
+            };
+        }
+        #endregion
+
+
     }
 }

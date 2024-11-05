@@ -1,5 +1,5 @@
 ﻿@model List<InvoiceModel>
-<h1>List Of All invoices</h1>
+<h1>List of all invoices</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -20,11 +20,12 @@
                 <td>@invoiceModel.InvoiceID</td>
                 <td>@invoiceModel.TotalPrice</td>
                 <td>@invoiceModel.IsPaid</td>
-                <td>@invoiceModel.Created</td>
-                <td>@invoiceModel.Modified</td>
+                <td>@invoiceModel.Created?.ToString("yyyy-mm-dd")</td>
+                <td>@invoiceModel.Modified?.ToString("yyyy-mm-dd")</td>
                 <td>
                     <a asp-controller="Invoice" asp-action="EditInvoice" asp-route-invoiceID="@invoiceModel.InvoiceID" class="btn btn-outline-success">Edit</a>
                     <a asp-controller="Invoice" asp-action="Details" asp-route-invoiceID="@invoiceModel.InvoiceID" class="btn btn-outline-primary">Details</a>
+                    <a asp-controller="Invoice" asp-action="InvoicePDF" asp-route-invoiceID="@invoiceModel.InvoiceID" class="btn btn-outline-dark">Generate PDF</a>
                 </td>
             </tr>
         }

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Excercise02.bundle.scp.css"
     },
     {
+      "Id": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "PackagePath": "staticwebassets\\Rotativa\\wkhtmltopdf.exe"
+    },
+    {
       "Id": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

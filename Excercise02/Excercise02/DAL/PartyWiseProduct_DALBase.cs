@@ -8,12 +8,12 @@ namespace Excercise02.DAL
         public async Task<List<PartyWiseProductModel>> GetAllProductOfPartyByID(int id)
         {
 
-            List<PartyWiseProductModel> list = await _context.PartyWiseProduct.Where(p => p.PartyID == id)
-                            .Join(  _context.Products,
-                                    partyWiseProduct => partyWiseProduct.ProductID, 
-                                    product => product.ProductID, 
-                                    (partyWiseProduct, product) => new PartyWiseProductModel() { Product = product })
-                            .ToListAsync();
+            List<PartyWiseProductModel> list = await _context.PartyWiseProduct.Where(p => p.PartyID == id).Include(p => p.Product).ToListAsync();
+                            //.Join(_context.Products,
+                            //        partyWiseProduct => partyWiseProduct.ProductID,
+                            //        product => product.ProductID,
+                            //        (partyWiseProduct, product) => new PartyWiseProductModel() { Product = product })
+                            //.ToListAsync();
             return list;
         }
 

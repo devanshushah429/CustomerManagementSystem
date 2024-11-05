@@ -1,0 +1,110 @@
+﻿@model InvoiceModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Invoice</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #4CAF50; /* Green background for header */
+            color: white; /* White text color for header */
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Other styles */
+        .subtotal {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .total-label {
+            font-weight: bold;
+        }
+
+        .total-value {
+            font-size: 16px;
+            color: #4CAF50; /* Green color for total */
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <h3>Party Name: @Model.Party.PartyName</h3>
+    <h3>Date: @Model.InvoiceDate?.ToString("yyyy-MM-dd")</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (InvoiceWiseProductModel invoiceWiseProduct in Model.InvoiceWiseProducts)
+            {
+                <tr>
+                    <td>@invoiceWiseProduct.Product.ProductName</td>
+                    <td>@invoiceWiseProduct.Quantity</td>
+                    <td>@invoiceWiseProduct.Subtotal?.ToString("C2")</td> <!-- Currency format -->
+                </tr>
+            }
+            <tr>
+                <td colspan="2" class="total-label">Total Price:</td>
+                <td class="total-value">@Model.TotalPrice?.ToString("C2")</td> <!-- Currency format -->
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        Thank you for your business!
+    </div>
+</body>
+</html>

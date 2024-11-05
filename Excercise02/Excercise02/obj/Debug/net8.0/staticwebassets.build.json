@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "opuaA8c8P9CapRW2eFaZxcyPnvulPojFNN0nl1RhZZs=",
+  "Hash": "RZK+RAaWjTGtG+LmZGnoqE/Z8OTSPbHGkstPzRtpui0=",
   "Source": "Excercise02",
   "BasePath": "_content/Excercise02",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "Excercise02",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Devanshu\\MVC Task\\CustomerManagementSystem\\Excercise02\\Excercise02\\wwwroot\\",
+      "BasePath": "_content/Excercise02",
+      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     }
   ]
 }

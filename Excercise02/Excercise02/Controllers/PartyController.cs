@@ -8,24 +8,65 @@ namespace Excercise02.Controllers
 {
     public class PartyController : Controller
     {
-
-        private static Party_DALBase party_DALBase = new Party_DALBase();
-
+        private readonly InterParty_DALBase _InterParty_DALBase;
+        public PartyController(InterParty_DALBase InterParty_DALBase)
+        {
+            InterParty_DALBase = _InterParty_DALBase;
+        }
         #region View list of all the parties
         [Route("Party")]
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string partyName, string email, string phoneNumber, string sortOrder)
         {
             List<PartyModel> list = await party_DALBase.GetAllPartiesAsync();
+
+            #region Searching
+            if (!string.IsNullOrEmpty(partyName))
+            {
+                list = list.Where(p => p.PartyName.Contains(partyName, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            if (!string.IsNullOrEmpty(email))
+            {
+                list = list.Where(p => p.Email.Contains(email, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            if (!string.IsNullOrEmpty(phoneNumber))
+            {
+                list = list.Where(p => p.PhoneNumber.Contains(phoneNumber)).ToList(); // Assuming PhoneNumber is a string
+            }
+            #endregion
+
+            #region Sorting
+            switch (sortOrder)
+            {
+                case "PartyName":
+                    list = list.OrderBy(p => p.PartyName).ToList();
+                    break;
+                case "Created":
+                    list = list.OrderBy(p => p.Created).ToList();
+                    break;
+                case "Modified":
+                    list = list.OrderBy(p => p.Modified).ToList();
+                    break;
+                case "PhoneNumber":
+                default:
+                    list = list.OrderBy(p => p.PhoneNumber).ToList();
+                    break;
+            }
+            #endregion
+
+            ViewBag.PartyName = partyName;
+            ViewBag.Email = email;
+            ViewBag.PhoneNumber = phoneNumber;
+
             return View(list);
         }
         #endregion
 
         #region Show Details of party
         [HttpGet]
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int partyID)
         {
-            PartyModel? party = await party_DALBase.GetPartyDetailsAsync(id);
+            PartyModel? party = await InterParty_DALBase.GetPartyDetailsAsync(partyID);
             if (party != null)
             {
                 return View(party);

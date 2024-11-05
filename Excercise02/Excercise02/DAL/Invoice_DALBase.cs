@@ -26,9 +26,12 @@ namespace Excercise02.DAL
         public async Task<InvoiceModel>? GetInvoiceDetails(int invoiceID)
         {
             InvoiceModel? invoiceModel = await _context.Invoices
-                .Include(i => i.InvoiceWiseProducts)
+                .Include(i => i.InvoiceWiseProducts)!
                 .ThenInclude(iwp => iwp.Product)
+                .Include(i => i.Party)
                 .FirstOrDefaultAsync(i => i.InvoiceID == invoiceID);
+
+            //List<InvoiceWiseProductModel> invoiceWiseProductModels = await _context.InvoiceWiseProducts.ToListAsync();
             return invoiceModel;
         }
         #endregion

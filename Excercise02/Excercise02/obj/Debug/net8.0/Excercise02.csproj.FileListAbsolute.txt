@@ -426,3 +426,5 @@ D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\obj\Debug\
 D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\obj\Debug\net8.0\Excercis.FCE43015.Up2Date
 D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\obj\Debug\net8.0\Excercise02.genruntimeconfig.cache
 D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\obj\Debug\net8.0\ref\Excercise02.dll
+D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\obj\Debug\net8.0\Excercise02.MvcApplicationPartsAssemblyInfo.cs
+D:\Devanshu\MVC Task\CustomerManagementSystem\Excercise02\Excercise02\bin\Debug\net8.0\Rotativa.AspNetCore.dll

@@ -36,8 +36,9 @@ namespace Excercise02.Controllers
         {
             PartyWiseProductModel partyWiseProductModel = new PartyWiseProductModel() { ProductID = productID, PartyID = partyID };
             _partyWiseProduct_DALBase.AddPartyWiseProduct(partyWiseProductModel);
-            return RedirectToAction("PartyWiseInvoice", "Party", new { partyID = partyID });
+            return RedirectToAction("Details", "Party", new { partyID = partyID });
         }
         #endregion
+
     }
 }

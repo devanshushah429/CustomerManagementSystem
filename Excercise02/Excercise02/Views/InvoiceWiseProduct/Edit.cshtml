@@ -1,0 +1,11 @@
+﻿@model InvoiceWiseProductModel
+
+<form asp-controller="InvoiceWiseProduct" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ProductID"/>
+    <input type="hidden" asp-for="InvoiceID" />
+    <input type="hidden" asp-for="InvoiceWiseProductID" />
+    <h3>Product name: @Model.Product.ProductName</h3>
+    <h3>Product price: @Model.Product.ProductPrice</h3>
+    <input type="number" asp-for="Quantity" />
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

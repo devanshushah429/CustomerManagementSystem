@@ -1,16 +1,55 @@
 ﻿@model IEnumerable<ProductModel>
 
-<h1> Product List </h1>
+<h1>Product List</h1>
+
+<!-- Search Form Start-->
+<form method="get" asp-action="Index" class="d-flex align-items-center mb-3">
+    <div class="me-2">
+        <input type="text" name="searchName" class="form-control" placeholder="Search by Product Name" value="@ViewBag.ProductName" style="width: 200px;" />
+    </div>
+    <div class="me-2">
+        <input type="text" name="minPrice" class="form-control" placeholder="Minimum Product Price" value="@ViewBag.MinPrice" style="width: 200px;" />
+    </div>
+    <div class="me-2">
+        <input type="text" name="maxPrice" class="form-control" placeholder="Maximum Product Price" value="@ViewBag.MaxPrice" style="width: 200px;" />
+    </div>
+    <button class="btn btn-outline-secondary" type="submit">Search</button>
+</form>
+<!-- Search Form End-->
+
 <a asp-controller="Product" asp-action="AddEditProduct" class="btn btn-primary">Add Product</a>
+
 @if (Model.Count() > 0)
 {
-
     <table class="table">
         <thead>
             <tr>
-                <td>Product ID</td>
-                <td>Product Name</td>
-                <td>Product Price</td>
+                <td>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewBag.NameSort">
+                        Product Name
+                        @if (ViewBag.NameSort == "name_desc")
+                        {
+                            <span>&#9660;</span>
+                        }
+                        else
+                        {
+                            <span>&#9650;</span>
+                        }
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewBag.PriceSort">
+                        Product Price
+                        @if (ViewBag.PriceSort == "price_desc")
+                        {
+                            <span>&#9660;</span>
+                        }
+                        else
+                        {
+                            <span>&#9650;</span>
+                        }
+                    </a>
+                </td>
                 <td>Description</td>
                 <td>Created</td>
                 <td>Modified</td>
@@ -21,22 +60,15 @@
             @foreach (ProductModel productModel in Model)
             {
                 <tr>
-                    <td>@productModel.ProductID</td>
                     <td>@productModel.ProductName</td>
                     <td>@productModel.ProductPrice</td>
                     <td>@productModel.Description</td>
                     <td>@(productModel.Created?.ToString("dd-MM-yyyy") ?? "N/A")</td>
                     <td>@(productModel.Modified?.ToString("dd-MM-yyyy") ?? "N/A")</td>
                     <td>
-                        <a asp-controller="Product" asp-action="Details" asp-route-id="@productModel.ProductID" class="btn btn-outline-primary">
-                            Details
-                        </a>
-                        <a asp-controller="Product" asp-action="AddEditProduct" asp-route-id="@productModel.ProductID" class="btn btn-outline-success">
-                            Edit
-                        </a>
-                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@productModel.ProductID" class="btn btn-outline-danger">
-                            Delete
-                        </a>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@productModel.ProductID" class="btn btn-outline-primary">Details</a>
+                        <a asp-controller="Product" asp-action="AddEditProduct" asp-route-id="@productModel.ProductID" class="btn btn-outline-success">Edit</a>
+                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@productModel.ProductID" class="btn btn-outline-danger">Delete</a>
                     </td>
                 </tr>
             }
@@ -47,4 +79,4 @@ else
 {
     <h2>No products to display.</h2>
 }
-
+    

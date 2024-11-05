@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/InvoiceWiseProduct/AddInvoiceWiseProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVdpc2VQcm9kdWN0XEFkZEludm9pY2VXaXNlUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/InvoiceWiseProduct/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVdpc2VQcm9kdWN0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/InvoiceWiseProduct/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVdpc2VQcm9kdWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/Invoice/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/Invoice/InvoicePDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbnZvaWNlUERGLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Devanshu/MVC Task/CustomerManagementSystem/Excercise02/Excercise02/Views/PartyWiseProduct/AddPartyWiseProduct.cshtml]
